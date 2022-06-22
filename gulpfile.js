@@ -52,11 +52,10 @@ const styles = () => {
 
 const scripts = () =>{
    return src(paths.scripts.src)
-      
       .pipe(Concat("main.min.js"))
       .pipe(babel({
          presets: ['@babel/env']
-      }))
+         }))
       .pipe(Uglify())
       .pipe(dest(paths.scripts.dest))
 }
